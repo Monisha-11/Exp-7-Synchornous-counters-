@@ -43,46 +43,102 @@ As well as counting “up” from zero and increasing or incrementing to some pr
 This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
-
 4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
+
+# Procedure
+
+## STEP1:
 
 
 
-### PROGRAM 
-/*
+## STEP2:
+
+## STEP3:
+
+## STEP4:
+
+## STEP5:
+
+
+
+
+# PROGRAM 
+``` python
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+Developed by: Monisha T
+RegisterNumber:  212221240029
+
+UP COUNTER:
+
+module up (input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@ (posedge clk or posedge reset)
+begin
+if(reset)
+counter_up <= 4'd0;
+else
+counter_up <= counter_up + 4'd1;
+end
+assign counter = counter_up;
+endmodule
+
+DOWN COUNTER:
+
+module down(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@ (posedge clk or posedge reset)
+begin
+if(reset)
+counter_down <= 4'd0;
+else
+counter_down <= counter_down - 4'd1;
+end
+assign counter = counter_down;
+endmodule
+```
 
 
+# OUTPUTS:
+
+## RTL LOGIC UP COUNTER AND DOWN COUNTER  
+
+### UP COUNTER:
+
+![output](./output1.png)
+
+### DOWN COUNTER:
+
+![output](./output4.png)
 
 
+## TIMING DIGRAMS FOR COUNTER  
+
+### UP COUNTER:
+
+![output](./output2.png)
+
+![output](./output3.png)
+
+### DOWN COUNTER:
+
+![output](./output5.png)
+
+![output](./output6.png)
 
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+## TRUTH TABLE 
+
+### UP COUNTER:
+
+![output](./output7.jpeg)
+
+### DOWN COUNTER:
+
+![output](./output8.jpeg)
 
 
+# RESULTS 
 
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
+Hence the Four bit Up counter and Down counter is implemented successfully and its functionality is validated.
