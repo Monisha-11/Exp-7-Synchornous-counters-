@@ -144,7 +144,8 @@ endmodule
 
 ### DOWN COUNTER:
 
-![output](./output8.jpeg)
+![output8](https://user-images.githubusercontent.com/93427240/169742958-1368a7c5-870a-4e94-ae50-7be23f05fe18.jpeg)
+
 
 
 # RESULTS 
